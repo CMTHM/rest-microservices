@@ -1,0 +1,12 @@
+<mspapp appcode="assesttracking">
+		<entity>
+			<attribs>
+				<!-- Mandatory config parameters-->
+				<attrib name="name" value="asset tracking" />
+				<attrib name="thingcode" value="AT" />
+				<attrib name="category" value="tracking" />
+				<attrib name="version" value="v1" />
+				<!-- Optional config parameters add here-->
+			</attribs>
+		</entity>
+</mspapp>

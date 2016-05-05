@@ -1,0 +1,38 @@
+<mspapp appcode="assesttracking">
+		<entity>
+			<attribs>
+				<!-- Mandatory config parameters-->
+				<attrib name="name" value="asset tracking" />
+				<attrib name="thingcode" value="AT" />
+				<attrib name="category" value="tracking" />
+				<attrib name="version" value="v1" />
+				<!-- Optional config parameters add here-->
+			</attribs>
+		</entity>
+		
+		<msporgs>
+			<msporg orgcode="TC_SKYLITE" appcode="assesttracking" version="1.0">
+				<entity>
+					<attribs>
+						<!-- Mandatory config parameters-->
+						<attrib name="orgname" value="skylite" />
+						<attrib name="thingcode" value="Skylite" />
+						<attrib name="parentorg" value="none" />
+						<!-- Optional config parameters add here-->
+						
+					</attribs>
+				</entity>
+				<ingestion-topics>
+					<!-- Please make sure topic name & path are unique -->
+					<topic name="tc_skylite_tp1" direction="IN" broker="KAFKA" path="/AT/Skylite" />
+					<topic name="tc_skylite_tp2" direction="IN" broker="KAFKA" path="/AT/Skylite" />
+				</ingestion-topics>
+				<consumption-topics>
+						<!-- Please make sure topic name & path are unique -->
+						<topic name="at_skylite_bu_cab" direction="OUT" broker="KAFKA" path="/AT/Skylite/BU-CAB"/>
+						<topic name="at_skylite_bu_it" direction="OUT" broker="KAFKA" path="/AT/Skylite/BU-IT"/>
+						<topic name="at_skylite_bu_cons" direction="OUT" broker="KAFKA" path="/AT/Skylite/BU-CONS"/>
+			   </consumption-topics>
+			</msporg>
+		</msporgs>
+</mspapp>
